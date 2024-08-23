@@ -35,7 +35,7 @@ const Navbar = () => {
     <div className="bg-gray-100">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16 ">
         <div>
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-3xl font-bold">
             Career<span className="text-[blue]">Hub</span>
           </h1>
         </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
           <ul className="flex font-semibold text-gray-800 items-center gap-6">
             {user && user.role === "Recruiter" ? (
               <>
-                <li>
+                <li className="hover:underline">
                   <Link
                     to="/admin/companies"
                     className="text-blue-600 hover:text-blue-800"
@@ -51,7 +51,7 @@ const Navbar = () => {
                     Companies
                   </Link>
                 </li>
-                <li>
+                <li className="hover:underline">
                   <Link
                     to="/admin/jobs"
                     className="text-blue-600 hover:text-blue-800"
@@ -62,12 +62,12 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <li>
-                  <Link to="/" className="text-blue-600 hover:text-blue-800">
+                <li className="hover:underline">
+                  <Link to="/" className="text-bold text-blue-600 hover:text-blue-800">
                     Home
                   </Link>
                 </li>
-                <li>
+                <li className="hover:underline">
                   <Link
                     to="/jobs"
                     className="text-blue-600 hover:text-blue-800"
@@ -75,7 +75,7 @@ const Navbar = () => {
                     Jobs
                   </Link>
                 </li>
-                <li>
+                <li className="hover:underline">
                   <Link
                     to="/browse"
                     className="text-blue-600 hover:text-blue-800"

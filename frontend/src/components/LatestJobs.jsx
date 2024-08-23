@@ -20,7 +20,7 @@ const LatestJobs = () => {
           </div>
         ) : (
           allJobs?.slice(0, 6).map((job) => (
-            <div className="transition-transform transform hover:scale-105 hover:shadow-2xl duration-300 bg-gray-50 p-4 rounded-lg shadow-md">
+            <div className="transition-transform transform hover:scale-105 hover:shadow-2xl duration-300 bg-gray-100 p-4 rounded-lg shadow-md">
               <LatestJobCards key={job._id} job={job} />
             </div>
           ))

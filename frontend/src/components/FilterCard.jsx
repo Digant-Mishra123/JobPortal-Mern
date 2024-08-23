@@ -11,11 +11,11 @@ const filterData = [
     },
     {
         filterType:"Industry",
-        array:["Frontend Developer","Backend Developer","Full Stack Developer"]
+        array:["Frontend Developer","Backend Developer","Full Stack Developer","Graphic Designer","Data Analyst"]
     },
     {
-        filterType:"Salary",
-        array:["0-40k","42-1L","1L-5L"]
+        filterType:"Job Type",
+        array:["Full Time","Part Time","Intern"]
     }
 ]
 
@@ -30,7 +30,7 @@ const FilterCard = () => {
         dispatch(setSearchedQuery(selectedValue));
     },[selectedValue])
   return (
-    <div className='w-full bg-white p-3 rounded-md'>
+    <div className='w-full bg-white p-3 rounded-md border border-gray-400 shadow-2xl'>
         <h1 className='font-bold text-lg'>Filter Jobs</h1>
         <hr className='mt-3'/>
         <RadioGroup value={selectedValue} onValueChange={changeHandler}>

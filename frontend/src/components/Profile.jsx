@@ -17,7 +17,7 @@ const Profile = () => {
   useGetAppliedJobs()
   const [open,setOpen] = useState(false);
   const {user} = useSelector(store=>store.auth);
-
+  console.log(user);
   return (
     <div>
       <Navbar />
@@ -26,7 +26,7 @@ const Profile = () => {
           <div className="flex items-center gap-4">
             <Avatar className="h-24 w-24">
               <AvatarImage
-                src=" https://st3.depositphotos.com/43745012/44906/i/450/depositphotos_449066958-stock-photo-financial-accounting-logo-financial-logo.jpg"
+                src={user.profile?.profilePhoto}
                 alt="profile"
               />
             </Avatar>

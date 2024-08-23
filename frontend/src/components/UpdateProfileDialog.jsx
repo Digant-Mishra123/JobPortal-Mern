@@ -75,6 +75,21 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
       setInput({...input,file});
     }
 
+    // const imageChangeHandler = (e) => {
+    //   const file = e.target.files?.[0];
+    
+    //   if (file && file.type.startsWith("image/")) {
+    //     const imageUrl = URL.createObjectURL(file);
+    
+    //     setInput((prevInput) => ({
+    //       ...prevInput,
+    //       file,
+    //       imageUrl
+    //     }));
+    //   } else {
+    //     console.error("Please upload a valid image file.");
+    //   }
+    // }
   return (
     <div>
       <Dialog open={open}>
@@ -84,6 +99,12 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
           </DialogHeader>
           <form onSubmit={submitHandler}>
             <div className="grid gap-4 py-4">
+              {/* <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="file" className="text-right">
+                  Photo
+                </Label>
+                <Input id="file" name="file" type="file" accept="image/*" className="col-span-3" onChange={imageChangeHandler} />
+              </div> */}
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="name" className="text-right">
                   Name
@@ -132,5 +153,4 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
     </div>
   );
 };
-
-export default UpdateProfileDialog;
+export default UpdateProfileDialog
