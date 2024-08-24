@@ -51,7 +51,6 @@ const AdminJobsTable = () => {
                   <AvatarImage
                     src={job?.company?.logo}
                     alt={`${job?.company?.name} Logo`}
-                    // className="w-12 h-12 object-cover rounded-full"
                   />
                 </Avatar>
               </td>
