@@ -18,12 +18,12 @@ const AdminJobs = () => {
     },[input])
 
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen">
       <Navbar />
-      <div className="max-w-6xl mx-auto my-10">
+      <div className="max-w-6xl mx-auto my-5 p-2 bg-white shadow-lg rounded-lg">
         <div className="flex items-center justify-between ">
           <Input className="w-fit" placeholder="Filter by name, role" onChange={(e) => setInput(e.target.value)}/>
-          <Button onClick={() => navigate("/admin/jobs/create")}> New Jobs</Button>
+          <Button onClick={() => navigate("/admin/jobs/create")}>Post New Job</Button>
         </div>
         <AdminJobsTable />
       </div>
